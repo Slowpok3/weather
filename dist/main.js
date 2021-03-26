@@ -1,13 +1,1 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-var __webpack_exports__ = {};
-/******/ })()
-;
+(()=>{"use strict";(async function(e){const t=document.createElement("div"),n=await async function(){const e=await fetch("https://api.openweathermap.org/data/2.5/weather?q=London&appid=51795dc4cf57da75b397e534ce9928f3",{mode:"cors"}),t=await e.json(),n=t.main.temp,a=t.weather[0].description,c=[];return c.push(n),c.push(a),c}(),a=document.createElement("h1");a.innerText="Temperature"+n[0]+"degrees",t.appendChild(a);const c=document.createElement("h1");c.innerText=n[1],t.appendChild(c),e.append(t)})(document.getElementById("content")),console.log("hellow")})();

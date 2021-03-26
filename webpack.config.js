@@ -1,7 +1,8 @@
 const path = require('path');
+const { experiments } = require('webpack');
 
 module.exports = {
-  entry: 'src/index.js',
+  entry: './src/index',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -17,4 +18,8 @@ module.exports = {
       },
     ],
   },
+  experiments: {
+    topLevelAwait: true,
+  },
 };
+

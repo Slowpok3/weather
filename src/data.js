@@ -8,11 +8,18 @@ async function getWeatherData(){
     const data = await weatherInfo.json();
     //console.log(data);
 
-    return data;
+    const temperature = data.main.temp;
+    const description = data.weather[0].description;
+
+    const attributes = [];
+    attributes.push(temperature);
+    attributes.push(description);
+
+    return attributes;
     
     
 
     
 }
 
-//export default getWeatherData;
+export default getWeatherData;
