@@ -1,7 +1,10 @@
 async function getWeatherData(){
     const apiKey = '51795dc4cf57da75b397e534ce9928f3';
     
-    const weatherInfo = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=' + apiKey, {mode: 'cors'});
+    const location = document.getElementById('mainSearch').value;
+    console.log(location);
+    
+    const weatherInfo = await fetch('https://api.openweathermap.org/data/2.5/weather?q='+location+'&appid=' + apiKey, {mode: 'cors'});
     
     //console.log(weatherInfo);
 
