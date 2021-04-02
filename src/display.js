@@ -10,11 +10,20 @@ async function createDisplay(content){
 
     const tempDisplay = document.createElement('h1');
 
-    const tempMode = document.getElementById()
+    const tempMode = document.getElementsByName('tempType');
+    var temp = await data[0]-273;
+    
+    var a = await (tempMode[0].checked);
 
-    const temp = data[0]-273;
+    if (a == true){
+        temp = (data[0]-273);
+    }else{
+        temp = ( (data[0]-273)*(9/5) ) + 32;
+    }
+    //console.log(tempMode);
+    console.log(Math.round(temp))
 
-    tempDisplay.innerText = "Temperature: " + temp + "degrees";
+    tempDisplay.innerText = "Temperature: " + Math.round(temp)+ " degrees";
     parent.appendChild(tempDisplay);
 
     const descriptionDisplay = document.createElement('h1');

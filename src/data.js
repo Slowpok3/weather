@@ -3,7 +3,7 @@ async function getWeatherData(){
     
     const location = document.getElementById('mainSearch').value;
     console.log(location);
-    
+
     const weatherInfo = await fetch('https://api.openweathermap.org/data/2.5/weather?q='+location+'&appid=' + apiKey, {mode: 'cors'});
     
     //console.log(weatherInfo);
